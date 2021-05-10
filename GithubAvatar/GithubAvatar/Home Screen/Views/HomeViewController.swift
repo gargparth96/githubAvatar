@@ -21,8 +21,9 @@ class HomeViewController: UIViewController {
 
     private func initialiseTableView() {
         searchedResultsTableView.isHidden = true
-        searchedResultsTableView.dataSource = homeScreenViewModel
-        searchedResultsTableView.delegate = homeScreenViewModel
+        searchedResultsTableView.register(UserDetailsTableViewCell.nib,
+                                          forCellReuseIdentifier: UserDetailsTableViewCell.reuseIdentifier)
+        homeScreenViewModel?.assignTableViewManager(searchedResultsTableView)
     }
 }
 

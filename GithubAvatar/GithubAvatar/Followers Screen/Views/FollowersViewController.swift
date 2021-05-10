@@ -9,8 +9,31 @@ import UIKit
 
 class FollowersViewController: UIViewController {
 
+    static let identifier = "FollowersViewController"
+
+    @IBOutlet private weak var followersTableView: UITableView!
+
+    private weak var viewModel: FollowersScreenViewModel?
+
+    init(_ viewModel: FollowersScreenViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: FollowersViewController.identifier, bundle: nil)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        initialiseTableView()
+    }
+
+    private func initialiseTableView() {
+        followersTableView.isHidden = true
+        followersTableView.register(UserDetailsTableViewCell.nib,
+                                    forCellReuseIdentifier: UserDetailsTableViewCell.reuseIdentifier)
+        viewModel?.assignTableViewManager(followersTableView)
     }
 }
 

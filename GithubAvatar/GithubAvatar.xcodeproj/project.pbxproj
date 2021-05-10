@@ -24,6 +24,10 @@
 		B274F7B9264947020008D732 /* FollowersScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B274F7B8264947020008D732 /* FollowersScreenViewModel.swift */; };
 		B274F7C22649492E0008D732 /* FollowersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B274F7C02649492E0008D732 /* FollowersViewController.swift */; };
 		B274F7C32649492E0008D732 /* FollowersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B274F7C12649492E0008D732 /* FollowersViewController.xib */; };
+		B274F7D326494C880008D732 /* UserDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B274F7D126494C880008D732 /* UserDetailsTableViewCell.swift */; };
+		B274F7D426494C880008D732 /* UserDetailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B274F7D226494C880008D732 /* UserDetailsTableViewCell.xib */; };
+		B274F7D9264952110008D732 /* TableViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B274F7D8264952110008D732 /* TableViewManager.swift */; };
+		B274F7DE264954AB0008D732 /* TableViewActionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B274F7DD264954AB0008D732 /* TableViewActionHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +71,10 @@
 		B274F7B8264947020008D732 /* FollowersScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersScreenViewModel.swift; sourceTree = "<group>"; };
 		B274F7C02649492E0008D732 /* FollowersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersViewController.swift; sourceTree = "<group>"; };
 		B274F7C12649492E0008D732 /* FollowersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FollowersViewController.xib; sourceTree = "<group>"; };
+		B274F7D126494C880008D732 /* UserDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsTableViewCell.swift; sourceTree = "<group>"; };
+		B274F7D226494C880008D732 /* UserDetailsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserDetailsTableViewCell.xib; sourceTree = "<group>"; };
+		B274F7D8264952110008D732 /* TableViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewManager.swift; sourceTree = "<group>"; };
+		B274F7DD264954AB0008D732 /* TableViewActionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewActionHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				B274F7A826493EC10008D732 /* HomeScreenUpdatable.swift */,
+				B274F7DD264954AB0008D732 /* TableViewActionHandler.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -224,6 +233,7 @@
 			children = (
 				B274F7B7264946DA0008D732 /* UserDetailsTableViewCell */,
 				B274F7AD26493EC40008D732 /* Protocols */,
+				B274F7D8264952110008D732 /* TableViewManager.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -231,6 +241,8 @@
 		B274F7B7264946DA0008D732 /* UserDetailsTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				B274F7D126494C880008D732 /* UserDetailsTableViewCell.swift */,
+				B274F7D226494C880008D732 /* UserDetailsTableViewCell.xib */,
 			);
 			path = UserDetailsTableViewCell;
 			sourceTree = "<group>";
@@ -338,6 +350,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B274F7D426494C880008D732 /* UserDetailsTableViewCell.xib in Resources */,
 				B274F7C32649492E0008D732 /* FollowersViewController.xib in Resources */,
 				B274F753264937F40008D732 /* LaunchScreen.storyboard in Resources */,
 				B274F750264937F40008D732 /* Assets.xcassets in Resources */,
@@ -366,10 +379,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B274F7D9264952110008D732 /* TableViewManager.swift in Sources */,
 				B274F7A926493EC10008D732 /* HomeScreenUpdatable.swift in Sources */,
+				B274F7D326494C880008D732 /* UserDetailsTableViewCell.swift in Sources */,
 				B274F787264938F90008D732 /* StringExtension.swift in Sources */,
 				B274F7B9264947020008D732 /* FollowersScreenViewModel.swift in Sources */,
 				B274F7A126493E8B0008D732 /* HomeScreenViewModel.swift in Sources */,
+				B274F7DE264954AB0008D732 /* TableViewActionHandler.swift in Sources */,
 				B274F78C2649392A0008D732 /* UITableVIewCellExtension.swift in Sources */,
 				B274F74B264937F20008D732 /* HomeViewController.swift in Sources */,
 				B274F7C22649492E0008D732 /* FollowersViewController.swift in Sources */,

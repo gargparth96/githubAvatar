@@ -11,16 +11,22 @@ import UIKit
 class FollowersScreenViewModel: NSObject {
 
     private weak var view: ScreenUpdatable?
-    private var followers: [UserDetails]?
+    private var tableViewManager: TableViewManager?
     private var followersUrlString: String
 
     init(_ context: UIViewController?, and followersUrlString: String) {
-        let viewController = FollowersViewController()
-        self.view = viewController
         self.followersUrlString = followersUrlString
-        self.followers = nil
         super.init()
+        let viewController = FollowersViewController(self)
+        self.view = viewController
+        self.tableViewManager = TableViewManager(self)
+        self.tableViewManager?.updateItems(with: nil)
         self.pushViewController(inContext: context)
+    }
+
+    func assignTableViewManager(_ tableView: UITableView) {
+        tableView.delegate = tableViewManager
+        tableView.dataSource = tableViewManager
     }
 
     func loadDataOnScreen() {
@@ -33,11 +39,11 @@ class FollowersScreenViewModel: NSObject {
 
             guard let followers = response,
                   followers.count > 0 else {
-                self.followers = nil
+                self.tableViewManager?.updateItems(with: nil)
                 self.view?.reloadForSearchSuccessState(.failure)
                 return
             }
-            self.followers = followers
+            self.tableViewManager?.updateItems(with: followers)
             self.view?.reloadForSearchSuccessState(.success)
         }
     }
@@ -46,34 +52,12 @@ class FollowersScreenViewModel: NSObject {
         context?.navigationController?.pushViewController(self.view as! UIViewController,
                                                           animated: true)
     }
-
-    private func navigateToFollowersScreen(withUrl followersUrlString: String) {
-        _ = FollowersScreenViewModel(view as? UIViewController,
-                                     and: followersUrlString)
-    }
 }
 
-extension FollowersScreenViewModel: UITableViewDataSource, UITableViewDelegate {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return followers?.count ?? 0
-    }
+extension FollowersScreenViewModel: TableViewActionHandler {
 
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
-    }
-
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let followers = self.followers,
-              indexPath.row < followers.count else {
-            assertionFailure("Count mismatch")
-            return
-        }
-
-        guard let followersUrl = followers[indexPath.row].followersUrl else {
-            assertionFailure("Followers URL not available")
-            return
-        }
-
-        navigateToFollowersScreen(withUrl: followersUrl)
+    func navigateToFollowersScreen(withUrl followersUrlString: String) {
+        _ = FollowersScreenViewModel(view as? UIViewController,
+                                     and: followersUrlString)
     }
 }

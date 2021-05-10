@@ -12,13 +12,19 @@ import UIKit
 class HomeScreenViewModel: NSObject {
 
     private weak var view: ScreenUpdatable?
-    private var users: [UserDetails]?
+    private var tableViewManager: TableViewManager?
 
     init(_ view: ScreenUpdatable?) {
         self.view = view
-        self.users = nil
+        super.init()
+        self.tableViewManager = TableViewManager(self)
+        self.tableViewManager?.updateItems(with: nil)
     }
 
+    func assignTableViewManager(_ tableView: UITableView) {
+        tableView.delegate = tableViewManager
+        tableView.dataSource = tableViewManager
+    }
 
     func handleSearchAction(forQueryString queryString: String?) {
         guard let queryString = queryString,
@@ -26,10 +32,10 @@ class HomeScreenViewModel: NSObject {
             view?.reloadForSearchSuccessState(.failure)
             return
         }
-        getUsersWithQueryString(queryString)
+        fetchUsersWithQueryString(queryString)
     }
 
-    private func getUsersWithQueryString(_ queryString: String) {
+    private func fetchUsersWithQueryString(_ queryString: String) {
         Networking.sharedInstance.getUsersMatchingSearchedQuery(queryString) { [weak self] (response, error) in
             guard let self = self else { return }
 
@@ -37,42 +43,20 @@ class HomeScreenViewModel: NSObject {
                   response.totalCount > 0,
                   response.incompleteResults == false,
                   let users = response.items else {
-                self.users = nil
+                self.tableViewManager?.updateItems(with: nil)
                 self.view?.reloadForSearchSuccessState(.failure)
                 return
             }
-            self.users = users
+            self.tableViewManager?.updateItems(with: users)
             self.view?.reloadForSearchSuccessState(.success)
         }
     }
-
-    private func navigateToFollowersScreen(withUrl followersUrlString: String) {
-        _ = FollowersScreenViewModel(view as? UIViewController,
-                                     and: followersUrlString)
-    }
 }
 
-extension HomeScreenViewModel: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return users?.count ?? 0
-    }
+extension HomeScreenViewModel: TableViewActionHandler {
 
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
-    }
-
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let users = self.users,
-              indexPath.row < users.count else {
-            assertionFailure("Count mismatch")
-            return
-        }
-
-        guard let followersUrl = users[indexPath.row].followersUrl else {
-            assertionFailure("Followers URL not available")
-            return
-        }
-
-        navigateToFollowersScreen(withUrl: followersUrl)
+    func navigateToFollowersScreen(withUrl followersUrlString: String) {
+        _ = FollowersScreenViewModel(view as? UIViewController,
+                                     and: followersUrlString)
     }
 }
