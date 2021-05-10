@@ -12,6 +12,7 @@ class FollowersViewController: UIViewController {
     static let identifier = "FollowersViewController"
 
     @IBOutlet private weak var followersTableView: UITableView!
+    @IBOutlet private weak var errorLabel: UILabel!
 
     private weak var viewModel: FollowersScreenViewModel?
 
@@ -26,6 +27,7 @@ class FollowersViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        errorLabel.isHidden = true
         initialiseTableView()
     }
 
@@ -35,11 +37,23 @@ class FollowersViewController: UIViewController {
                                     forCellReuseIdentifier: UserDetailsTableViewCell.reuseIdentifier)
         viewModel?.assignTableViewManager(followersTableView)
     }
+
+
+    private func configureScreen(forErrorRecieved recieved: Bool) {
+        followersTableView.isHidden = recieved
+        errorLabel.isHidden = !recieved
+    }
 }
 
 extension FollowersViewController: ScreenUpdatable {
     
     func reloadForSearchSuccessState(_ state: ResponseState) {
-
+        switch state {
+        case .success:
+            configureScreen(forErrorRecieved: false)
+            followersTableView.reloadData()
+        case .failure:
+            configureScreen(forErrorRecieved: true)
+        }
     }
 }

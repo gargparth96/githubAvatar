@@ -9,6 +9,7 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    @IBOutlet private weak var inputIdtextField: UITextField!
     @IBOutlet private weak var searchedResultsTableView: UITableView!
 
     private var homeScreenViewModel: HomeScreenViewModel!
@@ -25,11 +26,41 @@ class HomeViewController: UIViewController {
                                           forCellReuseIdentifier: UserDetailsTableViewCell.reuseIdentifier)
         homeScreenViewModel?.assignTableViewManager(searchedResultsTableView)
     }
+
+    @IBAction private func searchButtonTapped(_ sender: Any) {
+        homeScreenViewModel?.handleSearchAction(forQueryString: inputIdtextField.text)
+    }
+
+    private func configureScreen(forErrorRecieved recieved: Bool) {
+        searchedResultsTableView.isHidden = recieved
+        showErrorPrompt()
+    }
+
+    private func showErrorPrompt() {
+        let title = "Searched user not found"
+        let message = "Oops! Something went wrong while fetching data for \(inputIdtextField.text)"
+
+        let errorAlert = UIAlertController(title: title,
+                                           message: message,
+                                           preferredStyle: UIAlertController.Style.alert)
+
+        errorAlert.addAction(UIAlertAction(title: "Okay",
+                                           style: UIAlertAction.Style.default,
+                                           handler: nil))
+
+        present(errorAlert, animated: true, completion: nil)
+    }
 }
 
 
 extension HomeViewController: ScreenUpdatable {
     func reloadForSearchSuccessState(_ state: ResponseState) {
-
+        switch state {
+        case .success:
+            configureScreen(forErrorRecieved: false)
+            searchedResultsTableView.reloadData()
+        case .failure:
+            configureScreen(forErrorRecieved: true)
+        }
     }
 }

@@ -14,8 +14,6 @@
 		B274F753264937F40008D732 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B274F751264937F40008D732 /* LaunchScreen.storyboard */; };
 		B274F75E264937F40008D732 /* GithubAvatarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B274F75D264937F40008D732 /* GithubAvatarTests.swift */; };
 		B274F769264937F40008D732 /* GithubAvatarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B274F768264937F40008D732 /* GithubAvatarUITests.swift */; };
-		B274F782264938E80008D732 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B274F781264938E80008D732 /* UIViewControllerExtension.swift */; };
-		B274F787264938F90008D732 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B274F786264938F90008D732 /* StringExtension.swift */; };
 		B274F78C2649392A0008D732 /* UITableVIewCellExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B274F78B2649392A0008D732 /* UITableVIewCellExtension.swift */; };
 		B274F791264939490008D732 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B274F790264939490008D732 /* Networking.swift */; };
 		B274F796264939A00008D732 /* SearchResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B274F795264939A00008D732 /* SearchResponseModel.swift */; };
@@ -61,8 +59,6 @@
 		B274F764264937F40008D732 /* GithubAvatarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GithubAvatarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B274F768264937F40008D732 /* GithubAvatarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubAvatarUITests.swift; sourceTree = "<group>"; };
 		B274F76A264937F40008D732 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B274F781264938E80008D732 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
-		B274F786264938F90008D732 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		B274F78B2649392A0008D732 /* UITableVIewCellExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableVIewCellExtension.swift; sourceTree = "<group>"; };
 		B274F790264939490008D732 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		B274F795264939A00008D732 /* SearchResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponseModel.swift; sourceTree = "<group>"; };
@@ -168,8 +164,6 @@
 		B274F780264938BB0008D732 /* Utils+Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				B274F781264938E80008D732 /* UIViewControllerExtension.swift */,
-				B274F786264938F90008D732 /* StringExtension.swift */,
 				B274F78B2649392A0008D732 /* UITableVIewCellExtension.swift */,
 			);
 			path = "Utils+Extensions";
@@ -382,7 +376,6 @@
 				B274F7D9264952110008D732 /* TableViewManager.swift in Sources */,
 				B274F7A926493EC10008D732 /* HomeScreenUpdatable.swift in Sources */,
 				B274F7D326494C880008D732 /* UserDetailsTableViewCell.swift in Sources */,
-				B274F787264938F90008D732 /* StringExtension.swift in Sources */,
 				B274F7B9264947020008D732 /* FollowersScreenViewModel.swift in Sources */,
 				B274F7A126493E8B0008D732 /* HomeScreenViewModel.swift in Sources */,
 				B274F7DE264954AB0008D732 /* TableViewActionHandler.swift in Sources */,
@@ -392,7 +385,6 @@
 				B274F796264939A00008D732 /* SearchResponseModel.swift in Sources */,
 				B274F791264939490008D732 /* Networking.swift in Sources */,
 				B274F747264937F20008D732 /* AppDelegate.swift in Sources */,
-				B274F782264938E80008D732 /* UIViewControllerExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
