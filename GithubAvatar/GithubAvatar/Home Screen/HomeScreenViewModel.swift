@@ -11,10 +11,10 @@ import UIKit
 
 class HomeScreenViewModel: NSObject {
 
-    private weak var view: HomeScreenUpdatable?
+    private weak var view: ScreenUpdatable?
     private var users: [UserDetails]?
 
-    init(_ view: HomeScreenUpdatable?) {
+    init(_ view: ScreenUpdatable?) {
         self.view = view
         self.users = nil
     }
@@ -45,6 +45,11 @@ class HomeScreenViewModel: NSObject {
             self.view?.reloadForSearchSuccessState(.success)
         }
     }
+
+    private func navigateToFollowersScreen(withUrl followersUrlString: String) {
+        _ = FollowersScreenViewModel(view as? UIViewController,
+                                     and: followersUrlString)
+    }
 }
 
 extension HomeScreenViewModel: UITableViewDelegate, UITableViewDataSource {
@@ -67,5 +72,7 @@ extension HomeScreenViewModel: UITableViewDelegate, UITableViewDataSource {
             assertionFailure("Followers URL not available")
             return
         }
+
+        navigateToFollowersScreen(withUrl: followersUrl)
     }
 }

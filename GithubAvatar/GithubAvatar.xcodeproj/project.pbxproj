@@ -21,6 +21,9 @@
 		B274F796264939A00008D732 /* SearchResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B274F795264939A00008D732 /* SearchResponseModel.swift */; };
 		B274F7A126493E8B0008D732 /* HomeScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B274F7A026493E8B0008D732 /* HomeScreenViewModel.swift */; };
 		B274F7A926493EC10008D732 /* HomeScreenUpdatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B274F7A826493EC10008D732 /* HomeScreenUpdatable.swift */; };
+		B274F7B9264947020008D732 /* FollowersScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B274F7B8264947020008D732 /* FollowersScreenViewModel.swift */; };
+		B274F7C22649492E0008D732 /* FollowersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B274F7C02649492E0008D732 /* FollowersViewController.swift */; };
+		B274F7C32649492E0008D732 /* FollowersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B274F7C12649492E0008D732 /* FollowersViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +64,9 @@
 		B274F795264939A00008D732 /* SearchResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponseModel.swift; sourceTree = "<group>"; };
 		B274F7A026493E8B0008D732 /* HomeScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewModel.swift; sourceTree = "<group>"; };
 		B274F7A826493EC10008D732 /* HomeScreenUpdatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenUpdatable.swift; sourceTree = "<group>"; };
+		B274F7B8264947020008D732 /* FollowersScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersScreenViewModel.swift; sourceTree = "<group>"; };
+		B274F7C02649492E0008D732 /* FollowersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersViewController.swift; sourceTree = "<group>"; };
+		B274F7C12649492E0008D732 /* FollowersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FollowersViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +117,8 @@
 		B274F745264937F20008D732 /* GithubAvatar */ = {
 			isa = PBXGroup;
 			children = (
+				B274F7B6264946CC0008D732 /* Common */,
+				B274F7B4264946BB0008D732 /* Followers Screen */,
 				B274F79A26493D470008D732 /* Networking */,
 				B274F780264938BB0008D732 /* Utils+Extensions */,
 				B274F77F264938AC0008D732 /* Home Screen */,
@@ -143,7 +151,6 @@
 		B274F77F264938AC0008D732 /* Home Screen */ = {
 			isa = PBXGroup;
 			children = (
-				B274F7AD26493EC40008D732 /* Protocols */,
 				B274F79F26493E790008D732 /* Views */,
 				B274F7A026493E8B0008D732 /* HomeScreenViewModel.swift */,
 			);
@@ -192,6 +199,40 @@
 				B274F7A826493EC10008D732 /* HomeScreenUpdatable.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		B274F7B4264946BB0008D732 /* Followers Screen */ = {
+			isa = PBXGroup;
+			children = (
+				B274F7B5264946C40008D732 /* Views */,
+				B274F7B8264947020008D732 /* FollowersScreenViewModel.swift */,
+			);
+			path = "Followers Screen";
+			sourceTree = "<group>";
+		};
+		B274F7B5264946C40008D732 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B274F7C02649492E0008D732 /* FollowersViewController.swift */,
+				B274F7C12649492E0008D732 /* FollowersViewController.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B274F7B6264946CC0008D732 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				B274F7B7264946DA0008D732 /* UserDetailsTableViewCell */,
+				B274F7AD26493EC40008D732 /* Protocols */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		B274F7B7264946DA0008D732 /* UserDetailsTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UserDetailsTableViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,6 +338,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B274F7C32649492E0008D732 /* FollowersViewController.xib in Resources */,
 				B274F753264937F40008D732 /* LaunchScreen.storyboard in Resources */,
 				B274F750264937F40008D732 /* Assets.xcassets in Resources */,
 				B274F74E264937F20008D732 /* Main.storyboard in Resources */,
@@ -326,9 +368,11 @@
 			files = (
 				B274F7A926493EC10008D732 /* HomeScreenUpdatable.swift in Sources */,
 				B274F787264938F90008D732 /* StringExtension.swift in Sources */,
+				B274F7B9264947020008D732 /* FollowersScreenViewModel.swift in Sources */,
 				B274F7A126493E8B0008D732 /* HomeScreenViewModel.swift in Sources */,
 				B274F78C2649392A0008D732 /* UITableVIewCellExtension.swift in Sources */,
 				B274F74B264937F20008D732 /* HomeViewController.swift in Sources */,
+				B274F7C22649492E0008D732 /* FollowersViewController.swift in Sources */,
 				B274F796264939A00008D732 /* SearchResponseModel.swift in Sources */,
 				B274F791264939490008D732 /* Networking.swift in Sources */,
 				B274F747264937F20008D732 /* AppDelegate.swift in Sources */,

@@ -7,11 +7,11 @@
 
 import Foundation
 
-enum SearchState {
+enum ResponseState {
     case success
     case failure
 }
 
-protocol HomeScreenUpdatable: class {
-    func reloadForSearchSuccessState(_ state: SearchState)
+protocol ScreenUpdatable: class {
+    func reloadForSearchSuccessState(_ state: ResponseState)
 }

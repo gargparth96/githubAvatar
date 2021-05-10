@@ -27,8 +27,8 @@ class HomeViewController: UIViewController {
 }
 
 
-extension HomeViewController: HomeScreenUpdatable {
-    func reloadForSearchSuccessState(_ state: SearchState) {
+extension HomeViewController: ScreenUpdatable {
+    func reloadForSearchSuccessState(_ state: ResponseState) {
 
     }
 }
