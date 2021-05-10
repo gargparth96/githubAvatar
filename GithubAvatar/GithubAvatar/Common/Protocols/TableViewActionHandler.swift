@@ -7,6 +7,10 @@
 
 import Foundation
 
+/*
+ This passes the tap action from the table view manager to the view models
+ */
+
 protocol TableViewActionHandler: class {
     func navigateToFollowersScreen(withUrl followersUrlString: String)
 }

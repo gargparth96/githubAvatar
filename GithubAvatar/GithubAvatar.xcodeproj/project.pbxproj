@@ -18,7 +18,7 @@
 		B274F791264939490008D732 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B274F790264939490008D732 /* Networking.swift */; };
 		B274F796264939A00008D732 /* SearchResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B274F795264939A00008D732 /* SearchResponseModel.swift */; };
 		B274F7A126493E8B0008D732 /* HomeScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B274F7A026493E8B0008D732 /* HomeScreenViewModel.swift */; };
-		B274F7A926493EC10008D732 /* HomeScreenUpdatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B274F7A826493EC10008D732 /* HomeScreenUpdatable.swift */; };
+		B274F7A926493EC10008D732 /* ScreenUpdatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B274F7A826493EC10008D732 /* ScreenUpdatable.swift */; };
 		B274F7B9264947020008D732 /* FollowersScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B274F7B8264947020008D732 /* FollowersScreenViewModel.swift */; };
 		B274F7C22649492E0008D732 /* FollowersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B274F7C02649492E0008D732 /* FollowersViewController.swift */; };
 		B274F7C32649492E0008D732 /* FollowersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B274F7C12649492E0008D732 /* FollowersViewController.xib */; };
@@ -65,7 +65,7 @@
 		B274F790264939490008D732 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		B274F795264939A00008D732 /* SearchResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponseModel.swift; sourceTree = "<group>"; };
 		B274F7A026493E8B0008D732 /* HomeScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewModel.swift; sourceTree = "<group>"; };
-		B274F7A826493EC10008D732 /* HomeScreenUpdatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenUpdatable.swift; sourceTree = "<group>"; };
+		B274F7A826493EC10008D732 /* ScreenUpdatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenUpdatable.swift; sourceTree = "<group>"; };
 		B274F7B8264947020008D732 /* FollowersScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersScreenViewModel.swift; sourceTree = "<group>"; };
 		B274F7C02649492E0008D732 /* FollowersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersViewController.swift; sourceTree = "<group>"; };
 		B274F7C12649492E0008D732 /* FollowersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FollowersViewController.xib; sourceTree = "<group>"; };
@@ -204,7 +204,7 @@
 		B274F7AD26493EC40008D732 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				B274F7A826493EC10008D732 /* HomeScreenUpdatable.swift */,
+				B274F7A826493EC10008D732 /* ScreenUpdatable.swift */,
 				B274F7DD264954AB0008D732 /* TableViewActionHandler.swift */,
 			);
 			path = Protocols;
@@ -380,7 +380,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B274F7D9264952110008D732 /* TableViewManager.swift in Sources */,
-				B274F7A926493EC10008D732 /* HomeScreenUpdatable.swift in Sources */,
+				B274F7A926493EC10008D732 /* ScreenUpdatable.swift in Sources */,
 				B274F7D326494C880008D732 /* UserDetailsTableViewCell.swift in Sources */,
 				B274F7B9264947020008D732 /* FollowersScreenViewModel.swift in Sources */,
 				B274F7A126493E8B0008D732 /* HomeScreenViewModel.swift in Sources */,

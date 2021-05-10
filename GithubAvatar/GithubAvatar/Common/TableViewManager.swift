@@ -8,6 +8,12 @@
 import Foundation
 import UIKit
 
+/*
+ Setting the table views on both the screen using a single manager.
+ Takes a view model as TableViewActionHandler.
+ This need to be updated on items change from view models.
+ */
+
 class TableViewManager: NSObject, UITableViewDataSource, UITableViewDelegate {
 
     private var items: [UserDetails]?

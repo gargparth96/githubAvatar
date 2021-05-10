@@ -7,6 +7,12 @@
 
 import UIKit
 
+/*
+ This screen displays a list of the followers as fetched using followers url.
+ Uses a table view to display the items.
+ Performs action on tapping any follower. Shows consecutive followers.
+ */
+
 class FollowersViewController: UIViewController {
 
     static let identifier = "FollowersViewController"

@@ -7,6 +7,12 @@
 
 import UIKit
 
+/*
+ This screen displays a list of the users from the seach api.
+ Uses a table view to display the items.
+ Performs action on tapping any follower. Shows followers.
+ */
+
 class HomeViewController: UIViewController {
 
     @IBOutlet private weak var inputIdtextField: UITextField!

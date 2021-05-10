@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 struct SearchResponse: Codable {
     let totalCount: Int
     let incompleteResults: Bool

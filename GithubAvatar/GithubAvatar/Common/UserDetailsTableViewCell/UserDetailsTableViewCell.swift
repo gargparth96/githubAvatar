@@ -7,6 +7,11 @@
 
 import UIKit
 
+/*
+ Cell to display the user avatar and name.
+ Also displays an arrow depicting the presence of followers url
+ */
+
 class UserDetailsTableViewCell: UITableViewCell {
 
     @IBOutlet private weak var avatarImageView: UIImageView!

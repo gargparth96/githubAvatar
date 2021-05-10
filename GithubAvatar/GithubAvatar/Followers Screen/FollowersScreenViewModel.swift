@@ -8,6 +8,11 @@
 import Foundation
 import UIKit
 
+/*
+ View model for the followers screen.
+ Handles API call, setups table view manager and listens to tap action
+ */
+
 class FollowersScreenViewModel: NSObject {
 
     private weak var view: ScreenUpdatable?

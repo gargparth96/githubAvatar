@@ -8,6 +8,10 @@
 import Foundation
 import UIKit
 
+/*
+ View model for the followers screen.
+ Handles search query, API call, setups table view manager and listens to tap action.
+ */
 
 class HomeScreenViewModel: NSObject {
 
