@@ -17,8 +17,9 @@ class UserDetailsTableViewCell: UITableViewCell {
         super.awakeFromNib()
     }
 
-    // TODO: Setup avatar image
     func setup(with userDetails: UserDetails) {
+        avatarImageView.setImage(using: userDetails.avatarUrl,
+                                 andDefaultImage: "person.crop.square")
         nameLabel.text = userDetails.login
         if let followersUrl = userDetails.followersUrl,
            !followersUrl.isEmpty {

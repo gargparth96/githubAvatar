@@ -27,6 +27,7 @@
 		B274F7D9264952110008D732 /* TableViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B274F7D8264952110008D732 /* TableViewManager.swift */; };
 		B274F7DE264954AB0008D732 /* TableViewActionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B274F7DD264954AB0008D732 /* TableViewActionHandler.swift */; };
 		B274F7E626495FB70008D732 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B274F7E526495FB70008D732 /* SceneDelegate.swift */; };
+		B274F7EB26496C210008D732 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B274F7EA26496C210008D732 /* UIImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		B274F7D8264952110008D732 /* TableViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewManager.swift; sourceTree = "<group>"; };
 		B274F7DD264954AB0008D732 /* TableViewActionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewActionHandler.swift; sourceTree = "<group>"; };
 		B274F7E526495FB70008D732 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		B274F7EA26496C210008D732 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				B274F78B2649392A0008D732 /* UITableVIewCellExtension.swift */,
+				B274F7EA26496C210008D732 /* UIImageView.swift */,
 			);
 			path = "Utils+Extensions";
 			sourceTree = "<group>";
@@ -389,6 +392,7 @@
 				B274F796264939A00008D732 /* SearchResponseModel.swift in Sources */,
 				B274F791264939490008D732 /* Networking.swift in Sources */,
 				B274F747264937F20008D732 /* AppDelegate.swift in Sources */,
+				B274F7EB26496C210008D732 /* UIImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

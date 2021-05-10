@@ -85,4 +85,14 @@ class Networking {
         }
         dataTask?.resume()
     }
+
+    func getRawData(from urlString: String, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
+
+        guard let url = URL(string: urlString) else {
+            completion(nil, nil, nil)
+            return
+        }
+
+        URLSession.shared.dataTask(with: url, completionHandler: completion).resume()
+    }
 }
