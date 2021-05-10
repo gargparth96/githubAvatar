@@ -14,7 +14,7 @@ class FollowersViewController: UIViewController {
     @IBOutlet private weak var followersTableView: UITableView!
     @IBOutlet private weak var errorLabel: UILabel!
 
-    private weak var viewModel: FollowersScreenViewModel?
+    private var viewModel: FollowersScreenViewModel?
 
     init(_ viewModel: FollowersScreenViewModel) {
         self.viewModel = viewModel
@@ -29,6 +29,7 @@ class FollowersViewController: UIViewController {
         super.viewDidLoad()
         errorLabel.isHidden = true
         initialiseTableView()
+        viewModel?.loadDataOnScreen()
     }
 
     private func initialiseTableView() {

@@ -26,6 +26,7 @@
 		B274F7D426494C880008D732 /* UserDetailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B274F7D226494C880008D732 /* UserDetailsTableViewCell.xib */; };
 		B274F7D9264952110008D732 /* TableViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B274F7D8264952110008D732 /* TableViewManager.swift */; };
 		B274F7DE264954AB0008D732 /* TableViewActionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B274F7DD264954AB0008D732 /* TableViewActionHandler.swift */; };
+		B274F7E626495FB70008D732 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B274F7E526495FB70008D732 /* SceneDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		B274F7D226494C880008D732 /* UserDetailsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserDetailsTableViewCell.xib; sourceTree = "<group>"; };
 		B274F7D8264952110008D732 /* TableViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewManager.swift; sourceTree = "<group>"; };
 		B274F7DD264954AB0008D732 /* TableViewActionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewActionHandler.swift; sourceTree = "<group>"; };
+		B274F7E526495FB70008D732 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 		B274F745264937F20008D732 /* GithubAvatar */ = {
 			isa = PBXGroup;
 			children = (
+				B274F7E526495FB70008D732 /* SceneDelegate.swift */,
 				B274F7B6264946CC0008D732 /* Common */,
 				B274F7B4264946BB0008D732 /* Followers Screen */,
 				B274F79A26493D470008D732 /* Networking */,
@@ -381,6 +384,7 @@
 				B274F7DE264954AB0008D732 /* TableViewActionHandler.swift in Sources */,
 				B274F78C2649392A0008D732 /* UITableVIewCellExtension.swift in Sources */,
 				B274F74B264937F20008D732 /* HomeViewController.swift in Sources */,
+				B274F7E626495FB70008D732 /* SceneDelegate.swift in Sources */,
 				B274F7C22649492E0008D732 /* FollowersViewController.swift in Sources */,
 				B274F796264939A00008D732 /* SearchResponseModel.swift in Sources */,
 				B274F791264939490008D732 /* Networking.swift in Sources */,

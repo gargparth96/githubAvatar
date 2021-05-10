@@ -33,12 +33,19 @@ class HomeViewController: UIViewController {
 
     private func configureScreen(forErrorRecieved recieved: Bool) {
         searchedResultsTableView.isHidden = recieved
-        showErrorPrompt()
+        if recieved {
+            showErrorPrompt()
+        }
     }
 
     private func showErrorPrompt() {
         let title = "Searched user not found"
-        let message = "Oops! Something went wrong while fetching data for \(inputIdtextField.text)"
+        var searchedQuery = "searched user"
+        if let inputText = inputIdtextField.text,
+           !inputText.isEmpty {
+            searchedQuery = inputText
+        }
+        let message = "Oops! Something went wrong while fetching data for " + searchedQuery
 
         let errorAlert = UIAlertController(title: title,
                                            message: message,

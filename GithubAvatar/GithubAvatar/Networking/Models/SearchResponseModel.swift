@@ -16,7 +16,7 @@ struct SearchResponse: Codable {
 
 struct UserDetails: Codable {
     let login: String
-    let id: String
+    let id: Int
     let avatarUrl: String?
     let followersUrl: String?
 }
